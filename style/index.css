@@ -1,7 +1,4 @@
-*{
-    margin: 0%;
-    padding: 0%;
-}
+
 
 :root{
     --preto: black ;
@@ -11,26 +8,33 @@
 header, footer{
     display: flex;
     justify-content: center;
-  
     width: 100%;
-    height: 60px }
+    height: 300px 
+
+}
+    
 
 
 #tabela{
+    border-collapse: collapse;
+    
 
 }
 
 th, td {
-    padding: 4px;
+    padding: 6px;
     border: 1px solid var(--preto);
     user-select: none;
     flex-direction: column;
+    text-align: center;
     gap: 80px;
     align-items: center;
+ 
 
 
 }
 
-
-
- 
+main{
+    gap: 30px;
+    justify-content: center;
+}
