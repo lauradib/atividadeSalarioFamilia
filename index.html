@@ -3,62 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SalárioFamília</title>
+    <title>Salário Família</title>
     <link rel="stylesheet" href="style/index.css">
 </head>
 <body>
 
 <header>
     <div id="banner">
-           <img src="images/salario-familia.jpg" alt="imagem">
+        <img src="images/salario-familia.jpg" alt="imagem">
     </div>
+    
 </header>
 
 <main>
     <div id="input">
-        <input type="EMPREGADO" placeholder="EMPREGADO">
+        <input id="empregadoInput" type="text" placeholder="EMPREGADO">
         <br>
-        <input type="QUANTIDADE DE FILHOS MAIORES QUE 14 ANOS" placeholder="QUANTIDADE DE FILHOS MAIORES QUE 14 ANOS">
+        <input id="filhosInput" type="number" placeholder="QUANTIDADE DE FILHOS MAIORES QUE 14 ANOS">
         <br>
-        <input type="SALÁRIO CONTRIBUIÇÃO" placeholder="SALÁRIO CONTRIBUIÇÃO">
+        <input id="salarioInput" type="number" placeholder="SALÁRIO CONTRIBUIÇÃO">
         <br>
+        <button onclick="calcularSalarioFamilia()">Calcular</button>
     </div>
 
-
     <table id="tabela">
-     <tr>
-
-            <th> Salario-contribuição </th>
-            <th> Cota salário família </th>
-            
-     </tr>
-
         <tr>
-
-            <td> Até R$ 808,89  </td>
-            <td> R$ 41,80 por filho </td>
-
-            
-
+            <th>Salário-contribuição</th>
+            <th>Cota salário família</th>
         </tr>
         <tr>
-            <td> Entre R$ 808,89 e 1.216,16 </td>
-            <td> R$ 29,16 por filho </td>
-
+            <td>Até R$ 808,89</td>
+            <td>R$ 41,80 por filho</td>
         </tr>
-        
-         <tr>
-            <td> Mais de 1.216,16 </td>
-             <td> Não há </td>
+        <tr>
+            <td>Entre R$ 808,89 e 1.216,16</td>
+            <td>R$ 29,16 por filho</td>
         </tr>
+        <tr>
+            <td>Mais de 1.216,16</td>
+            <td>Não há</td>
+        </tr>
+    </table>
 
-     </table>
-
+    <div id="resultado">
+        <span id="resultadoSalarioFamilia"></span> <!-- Elemento para exibir o resultado -->
+    </div>
 </main>
-
-
+    <script src="script/script.js"></script>
 <footer>
-
 </footer>
 
 </body>
